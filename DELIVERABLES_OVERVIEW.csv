@@ -1,0 +1,13 @@
+Nr,Aufgabe,Dateiname,Format,Status,Beschreibung
+1,Wake-Word-Vergleich,01_wake_word_comparison.md,Markdown,✅,Vergleich Porcupine vs OpenWakeWord vs Snowboy
+2,Trainings-Anleitung,02_computer_training_guide.md,Markdown,✅,Schritt-für-Schritt Anleitung für beide Methoden
+3,Recording-Skript,03_record_wake_word.py,Python,✅,Automatisiertes Aufnahme-Tool (200 positive + 200 negative + 60 background)
+4,Code-Integration,04_voice_assistant_computer.py,Python,✅,Vollständiger Voice Assistant mit Porcupine Wake-Word
+5.1,GitHub-Doku,05_WAKE_WORD_TRAINING.md,Markdown,✅,Haupt-Dokumentation für Wake-Word Training
+5.2,README-Updates,06_README_UPDATE.md,Markdown,✅,Alle Änderungen für README.md
+5.3,Gitignore-Updates,07_GITIGNORE_UPDATE.txt,Text,✅,Ergänzungen für .gitignore
+6,Testing-Framework,08_wake_word_testing.md,Markdown,✅,Umfassende Test-Checklisten
+7,Troubleshooting,10_troubleshooting.md,Markdown,✅,Lösungen für 8 Problemkategorien
+8,Assets-Sammlung,11_assets_collection.md,Markdown,✅,Dokumentation + 8 Bild-Dateien
+9,LLM-Architektur,12_llm_architecture.md,Markdown,✅,Planung ChatGPT/Perplexity/Manus Integration
+10,Roadmap,13_roadmap_next_steps.md,Markdown,✅,Projekt-Planung kurz/mittel/langfristig

@@ -1,0 +1,246 @@
+# .gitignore Updates für Computer Wake-Word Projekt
+
+# Füge folgende Zeilen zur bestehenden .gitignore hinzu:
+
+# ============================================================
+# Environment Variables & Secrets
+# ============================================================
+.env
+.env.local
+.env.*.local
+*.env
+
+# Picovoice AccessKey (falls in Dateien gespeichert)
+picovoice_key.txt
+access_key.txt
+
+# ============================================================
+# Wake-Word Training Data
+# ============================================================
+
+# Aufnahme-Dateien
+wake_word_recordings/
+recordings/
+*.wav
+*.mp3
+*.flac
+*.ogg
+
+# Negative Samples
+negative_samples/
+background_noise/
+
+# ============================================================
+# Wake-Word Models
+# ============================================================
+
+# Porcupine Models (.ppn Dateien)
+*.ppn
+models/*.ppn
+models/porcupine/
+
+# OpenWakeWord Models
+*.onnx
+*.tflite
+models/*.onnx
+models/*.tflite
+models/openwakeword/
+
+# Model Checkpoints
+checkpoints/
+*.ckpt
+*.pth
+*.h5
+
+# Temporäre Model-Dateien
+models/temp/
+models/tmp/
+*.tmp
+
+# ============================================================
+# Audio & TTS
+# ============================================================
+
+# Temporäre TTS-Dateien
+temp_speech.mp3
+temp_*.mp3
+tts_cache/
+
+# Audio-Test-Dateien
+microphone_test.wav
+test_audio.wav
+test_recording.wav
+
+# ============================================================
+# Python
+# ============================================================
+
+# Virtual Environment (bereits vorhanden, aber zur Sicherheit)
+.venv/
+venv/
+env/
+ENV/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribution / Packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# ============================================================
+# IDE & Editor
+# ============================================================
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# ============================================================
+# OS
+# ============================================================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# ============================================================
+# Logs & Debugging
+# ============================================================
+
+# Log-Dateien
+*.log
+logs/
+*.log.*
+
+# Debug-Dateien
+debug/
+*.debug
+
+# Performance-Profiling
+*.prof
+*.lprof
+
+# ============================================================
+# Testing
+# ============================================================
+
+# Test-Ergebnisse
+test_results/
+test_output/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ============================================================
+# Documentation (Build-Artefakte)
+# ============================================================
+
+# Sphinx documentation
+docs/_build/
+docs/_static/
+docs/_templates/
+
+# ============================================================
+# Backup-Dateien
+# ============================================================
+
+# Backup-Dateien
+*.bak
+*.backup
+*_backup.py
+*_old.py
+*.orig
+
+# ============================================================
+# Projekt-spezifisch
+# ============================================================
+
+# Alte Voice Assistant Versionen (optional - falls du sie behalten willst, entferne diese Zeile)
+# voice_assistant_old.py
+# voice_assistant_backup.py
+
+# Temporäre Skripte
+scratch.py
+test.py
+temp.py
+
+# Notizen
+notes.txt
+todo.txt
+NOTES.md
+
+# ============================================================
+# WICHTIG: Was NICHT ignoriert werden sollte
+# ============================================================
+
+# Diese Dateien SOLLTEN committed werden:
+# - requirements.txt
+# - README.md
+# - LICENSE
+# - .gitignore selbst
+# - Alle .py Dateien (außer Backups)
+# - Dokumentation (.md Dateien)
+# - Beispiel-Konfigurationen (.env.example)
+
+# ============================================================
+# Beispiel .env.example Datei
+# ============================================================
+
+# Erstelle eine .env.example Datei mit Platzhaltern:
+# PICOVOICE_ACCESS_KEY=your_access_key_here
+
+# Diese Datei KANN committed werden, da sie keine echten Secrets enthält
+# Nutzer können sie dann zu .env kopieren und ausfüllen
