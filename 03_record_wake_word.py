@@ -15,6 +15,7 @@ import os
 import sys
 from datetime import datetime
 from pathlib import Path
+import argparse
 
 # ============================================================
 # KONFIGURATION
@@ -416,6 +417,31 @@ def main():
     # Erstelle Verzeichnisse
     create_directories()
     
+    parser = argparse.ArgumentParser(description="Wake-Word Recording Tool v1.1")
+    parser.add_argument("--mode", choices=["positive", "negative", "background", "all", "test", "stats"], help="Aufnahmemodus")
+    parser.add_argument("--non-interactive", action="store_true", help="Nicht-interaktiver Modus für Skripte")
+    args = parser.parse_args()
+
+    if args.mode:
+        if args.mode == "positive":
+            record_positive_samples()
+        elif args.mode == "negative":
+            record_negative_samples()
+        elif args.mode == "background":
+            record_background_noise()
+        elif args.mode == "all":
+            print("\n🚀 KOMPLETT-DURCHLAUF GESTARTET")
+            record_positive_samples()
+            record_negative_samples()
+            record_background_noise()
+            print("\n🎉 KOMPLETT-DURCHLAUF ABGESCHLOSSEN!")
+        elif args.mode == "test":
+            test_microphone()
+        elif args.mode == "stats":
+            show_statistics()
+        return
+
+    # Interaktiver Modus
     while True:
         display_menu()
         
