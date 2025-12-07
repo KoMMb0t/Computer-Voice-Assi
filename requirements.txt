@@ -1,0 +1,39 @@
+# Computer Voice Assistant - Python Dependencies
+# Installiere mit: pip install -r requirements.txt
+
+# Wake-Word Detection
+pvporcupine==3.0.0
+
+# Speech-to-Text
+vosk==0.3.45
+
+# Audio Processing
+sounddevice==0.4.6
+numpy==1.24.3
+pyaudio==0.2.14
+
+# Text-to-Speech
+edge-tts==6.1.10
+
+# LLM Integration
+openai==1.12.0
+
+# Configuration Management
+configparser==6.0.0
+
+# Testing (optional)
+pytest==7.4.3
+pytest-mock==3.12.0
+
+# Home Assistant Integration (optional)
+requests==2.31.0
+websocket-client==1.7.0
+paho-mqtt==2.0.0
+
+# GUI (optional)
+# Tkinter ist built-in in Python
+# PyQt5==5.15.10  # Auskommentiert, nur bei Bedarf installieren
+
+# Advanced Audio Processing (optional)
+# noisereduce==3.0.0  # Auskommentiert, nur bei Bedarf installieren
+# webrtcvad==2.0.10  # Auskommentiert, nur bei Bedarf installieren
