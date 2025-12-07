@@ -237,6 +237,7 @@ def listen_for_wake_word(porcupine):
     
     def callback(indata, frames, time_info, status):
         nonlocal detected
+        global last_wake_detection_time
         
         if status:
             print(f"⚠️  Audio Status: {status}")
